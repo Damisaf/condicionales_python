@@ -4,7 +4,7 @@
 # Autor: Inove Coding School
 # Version: 2.0
 
-# NOTA: 
+# NOTA:
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
 # Están pensados para aquellos con conocimientos previo o que dispongan
 # de mucho más tiempo para abordar estos temas por su cuenta.
@@ -33,3 +33,31 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+palabra_1 = input("ingrese palabra 1: ")
+palabra_2 = input("ingrese palabra 2: ")
+palabra_3 = input("ingrese palabra 3: ")
+orden = input("ingrese [1]-alfabetico [2]-por longitud: ")
+
+
+if orden == "1":
+    if palabra_1 > palabra_2 and palabra_1 > palabra_3:
+        ordenadas = palabra_1
+        if palabra_2 > palabra_3:
+            ordenadas = ordenadas + " " + palabra_2 + " " + palabra_3
+        else:
+            ordenadas = ordenadas + " " + palabra_3 + " " + palabra_2
+    elif palabra_2 > palabra_1 and palabra_2 > palabra_3:
+        ordenadas = palabra_2
+        if palabra_1 > palabra_3:
+            ordenadas = ordenadas + " " + palabra_1 + " " + palabra_3
+        else:
+            ordenadas = ordenadas + " " + palabra_3 + " " + palabra_1
+    else:
+        ordenadas = palabra_3
+        if palabra_1 > palabra_2:
+            ordenadas = ordenadas + " " + palabra_1 + " " + palabra_2
+        else:
+            ordenadas = ordenadas + " " + palabra_2 + " " + palabra_1
+
+print(ordenadas)
+
