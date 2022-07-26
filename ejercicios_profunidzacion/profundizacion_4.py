@@ -39,7 +39,7 @@ palabra_3 = input("ingrese palabra 3: ")
 orden = input("ingrese [1]-alfabetico [2]-por longitud: ")
 
 
-if orden == "1":
+if orden == "1": 
     if palabra_1 > palabra_2 and palabra_1 > palabra_3:
         ordenadas = palabra_1
         if palabra_2 > palabra_3:
@@ -58,6 +58,29 @@ if orden == "1":
             ordenadas = ordenadas + " " + palabra_1 + " " + palabra_2
         else:
             ordenadas = ordenadas + " " + palabra_2 + " " + palabra_1
+    print("ordenadas de mayor a menor alfabeticamente: " + ordenadas)
+else:
+    len_1 = len(palabra_1)
+    len_2 = len(palabra_2)
+    len_3 = len(palabra_3)
+    if len_1 > len_2 and len_1 > len_3:
+        ordenadas = palabra_1
+        if len_2 > len_3:
+            ordenadas = ordenadas + " " + palabra_2 + " " + palabra_3
+        else:
+            ordenadas = ordenadas + " " + palabra_3 + " " + palabra_2
+    elif len_2 > len_1 and len_2 > len_3:
+        ordenadas = palabra_2
+        if len_1 > len_3:
+            ordenadas = ordenadas + " " + palabra_1 + " " + palabra_3
+        else:
+            ordenadas = ordenadas + " " + palabra_3 + " " + palabra_1
+    else:
+        ordenadas = palabra_3
+        if len_1 > len_2:
+            ordenadas = ordenadas + " " + palabra_1 + " " + palabra_2
+        else:
+            ordenadas = ordenadas + " " + palabra_2 + " " + palabra_1
+    print("ordenadas de mayor a menor por longitud: " + ordenadas)
 
-print(ordenadas)
-
+    
