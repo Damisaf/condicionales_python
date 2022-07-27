@@ -4,7 +4,7 @@
 # Autor: Inove Coding School
 # Version: 2.0
 
-# NOTA: 
+# NOTA:
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
 # Están pensados para aquellos con conocimientos previo o que dispongan
 # de mucho más tiempo para abordar estos temas por su cuenta.
@@ -34,8 +34,7 @@ temperatura_1 = float(input("Ingrese la temperatura 1: "))
 temperatura_2 = float(input("Ingrese la temperatura 2: "))
 temperatura_3 = float(input("Ingrese la temperatura 3: "))
 
-#forma 1
-print("forma 1")
+# temperatura maxima - forma 1
 if temperatura_1 > temperatura_2 and temperatura_1 > temperatura_3:
     print("la temperatura maxima es", temperatura_1)
 elif temperatura_2 > temperatura_1 and temperatura_2 > temperatura_3:
@@ -43,8 +42,8 @@ elif temperatura_2 > temperatura_1 and temperatura_2 > temperatura_3:
 else:
     print("la temperatura maxima es", temperatura_3)
 
-#forma 2
-print("forma 2")
+'''
+# otra forma de hacerlo
 if temperatura_1 > temperatura_2:
     if temperatura_1 > temperatura_3:
         print("la temperatura maxima es", temperatura_1)
@@ -55,3 +54,28 @@ else:
         print("la temperatura maxima es", temperatura_2)
     else:
         print("la temperatura maxima es", temperatura_3)
+
+# temperatura minima
+# primer forma de hacerlo
+if temperatura_1 < temperatura_2 and temperatura_1 < temperatura_3:
+    print("la temperatura minima es", temperatura_1)
+elif temperatura_2 < temperatura_1 and temperatura_2 < temperatura_3:
+    print("la temperatura minima es", temperatura_2)
+else:
+    print("la temperatura minima es", temperatura_3)
+'''
+
+# temperatura minima forma 2
+if temperatura_1 < temperatura_2:
+    if temperatura_1 < temperatura_3:
+        print("la temperatura minima es", temperatura_1)
+    else:
+        print("la temperatura minima es", temperatura_3)
+else:
+    if temperatura_2 < temperatura_3:
+        print("la temperatura minima es", temperatura_2)
+    else:
+        print("la temperatura minima es", temperatura_3)
+
+promedio = (temperatura_1 + temperatura_2 + temperatura_3) / 3
+print("la temperatura promedio es ", promedio)
