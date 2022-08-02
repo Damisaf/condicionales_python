@@ -1,4 +1,4 @@
-# Condicionales [Python]
+# Bucles [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
@@ -12,22 +12,42 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios de práctica con números
 '''
 Enunciado:
-Realice un programa que solicite por consola 2 números
-Calcule la diferencia entre ellos e informe por pantalla
-si el resultado es positivo, negativo o cero.
+Realice un programa que pida por consola dos números que representen
+el principio y fin de una secuencia numérica.
+Realizar un bucle "for" que recorra esa secuencia armada con "range"
+y cuente cuantos números ingresados hay, y la sumatoria de todos los números.
+Al finalizar el bucle, utilice la variable "cantidad_numeros" y la variable
+"sumatoria" para calcular el promedio de todos los números ingresados.
+Tener en cuenta que "range" no incluye el número de "fin" en su secuencia,
+sino que va hasta el anterior.
 '''
 
-print('Ejercicios de práctica con números')
+print('Comenzamos a ponernos serios!')
 # Empezar aquí la resolución del ejercicio
-numero_1 = float(input("ingrese el numero 1: "))
-numero_2 = float(input("ingrese el numero 2: "))
-diferencia = numero_1 - numero_2
-if diferencia > 0:
-    print("la diferencia es positiva")
-elif diferencia == 0:
-    print("la diferencia es cero")
-else:
-    print("la diferencia es negativa")
+
+# inicio = ....
+# fin = ....
+
+inicio = int(input('Ingrese el primer número de la secuencia\n'))
+fin = int(input('Ingrese el último número de la secuencia\n'))
+
+# cantidad_numeros ....
+# sumatoria ....
+cantidad_numeros = 0
+sumatoria = 0
+   
+# bucle.....
+for i in range(inicio,fin+1):
+    cantidad_numeros += 1
+    sumatoria += i
+
+# Al terminar el bucle calcular el promedio como:
+# promedio = sumatoria / cantidad_numeros
+promedio = sumatoria / cantidad_numeros
+
+# Imprimir resultado en pantalla
+print("La cantidad de numeros es: ", cantidad_numeros)
+print("La sumatoria de los numeros es: ", sumatoria)
+print("el promedio es: ", promedio)
